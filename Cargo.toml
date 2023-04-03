@@ -9,3 +9,18 @@ keywords = ["cesr", "keri", "acdc"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "~1"
+ed25519-dalek = "~1"
+k256 = "~0.13"
+lazy_static = "~1"
+p256 = "~0.13"
+rand = "0.7.0"
+rand_core = "~0.6"
+thiserror = "~1"
+zeroize = "~1"
+
+[dependencies.cesride]
+path = "../cesride"
+
+[dev-dependencies]
+rstest = "0.17.0"

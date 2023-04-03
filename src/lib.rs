@@ -1,14 +1,12 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+#[macro_use]
+mod core;
+mod crypto;
+mod error;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use crate::{
+    core::signer::Signer,
+    core::prefixer::Prefixer,
+    core::salter::Salter,
+    error::Error,
+    error::Result,
+};
